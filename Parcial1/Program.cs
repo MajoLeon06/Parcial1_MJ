@@ -2,11 +2,18 @@
 string nombre = Console.ReadLine();
 Console.WriteLine("Ingresar nota:");
 double nota = double.Parse(Console.ReadLine());
-if (nota>=70)
+if (nota >= 0 && nota <= 100)
 {
-    Console.WriteLine($"{nombre}, Aprobado");
+    if (nota >= 70)
+    {
+        Console.WriteLine($"{nombre}, Aprobado");
+    }
+    else
+    {
+        Console.WriteLine($"{nombre}, Reprobado");
+    }
 }
 else
 {
-    Console.WriteLine($"{nombre}, Reprobado");
+    Console.WriteLine("Ingrese un valor válido");
 }
